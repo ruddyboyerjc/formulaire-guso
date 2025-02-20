@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire GUSO - Déclaration Simplifiée</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        .gradient-title {
+            background: linear-gradient(45deg, #9333ea, #c084fc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .button-gradient {
+            background: linear-gradient(45deg, #c026d3, #7c3aed, #ec4899);
+            background-size: 200% 200%;
+            animation: gradient 3s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .button-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-purple-50 to-pink-50 min-h-screen">
+    <div class="container max-w-4xl mx-auto px-6 py-12">
+        <h1 class="text-4xl md:text-5xl font-bold gradient-title text-center mb-12">Déclaration GUSO Simplifiée</h1>
+
+        <!-- Section 1: Explication du système de paiement -->
+        <section class="card p-8 mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Système de Paiement GUSO</h2>
+            <p class="text-gray-600 mb-6">
+                Notre système propose une démarche simplifiée et légale pour vos déclarations GUSO :
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-lock text-4xl gradient-title"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Paiement unique et sécurisé</h3>
+                        <p class="text-gray-600">Effectuez votre paiement en toute sécurité via notre plateforme certifiée.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-check-circle text-4xl gradient-title"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Processus simplifié et légal</h3>
+                        <p class="text-gray-600">Une démarche conforme aux exigences légales, sans complexité administrative.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-file-alt text-4xl gradient-title"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Documents automatisés</h3>
+                        <p class="text-gray-600">Génération instantanée de tous vos documents GUSO nécessaires.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-hands-helping text-4xl gradient-title"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-2">Accompagnement personnalisé</h3>
+                        <p class="text-gray-600">Une équipe dédiée pour vous guider à chaque étape de votre déclaration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <form id="gusoForm" class="space-y-12">
+            <!-- Section 2: Informations personnelles -->
+            <section class="card p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Informations Personnelles</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="nom" class="block text-gray-600 mb-2">Nom</label>
+                        <input type="text" id="nom" name="nom" required
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="prenom" class="block text-gray-600 mb-2">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" required
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="tel" class="block text-gray-600 mb-2">Téléphone</label>
+                        <input type="tel" id="tel" name="tel" required
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-600 mb-2">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="adresse" class="block text-gray-600 mb-2">Adresse</label>
+                        <input type="text" id="adresse" name="adresse" required
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                            placeholder="Commencez à taper votre adresse...">
+                        <div id="adresse-suggestions" class="mt-2"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Informations GUSO -->
+            <section class="card p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Informations GUSO et DPAE</h2>
+                <div class="space-y-6">
+                    <div>
+                        <label for="date_naissance" class="block text-gray-600 mb-2">Date de naissance de l'employeur</label>
+                        <input type="date" id="date_naissance" name="date_naissance" required
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="lieu_naissance" class="block text-gray-600 mb-2">Lieu de naissance de l'employeur</label>
+                        <input type="text" id="lieu_naissance" name="lieu_naissance" required
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                            placeholder="Commencez à taper le lieu...">
+                        <div id="lieu-suggestions" class="mt-2"></div>
+                    </div>
+                    <div>
+                        <label for="secu" class="block text-gray-600 mb-2">Numéro de sécurité sociale de l'employeur</label>
+                        <input type="text" id="secu" name="secu" required pattern="[12][0-9]{2}[0-1][0-9](2[AB]|[0-9]{2})[0-9]{3}[0-9]{3}[0-9]{2}"
+                            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                            placeholder="Format: 1 ou 2 + AA MM DD XXX XXX XX">
+                    </div>
+                    <div class="flex items-start mt-6">
+                        <input type="checkbox" id="conditions" name="conditions" required
+                            class="mt-1 mr-2">
+                        <label for="conditions" class="text-gray-600">
+                            Je déclare que les informations fournies sont exactes et j'accepte les conditions d'utilisation
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <button type="submit" class="button-gradient w-full py-3 px-6 text-white rounded-full font-bold transition-all duration-300">
+                Envoyer le formulaire
+            </button>
+        </form>
+
+        <!-- Modal de confirmation -->
+        <div id="confirmationModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white p-8 rounded-xl max-w-md mx-4">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Formulaire envoyé avec succès !</h3>
+                <p class="text-gray-600">
+                    Vous allez recevoir un email contenant un lien de paiement.
+                    Veuillez vérifier votre boîte de réception.
+                </p>
+                <button onclick="closeModal()" class="button-gradient w-full mt-6 py-2 px-4 text-white rounded-full">
+                    Fermer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/api-adresse.js"></script>
+    <script src="js/form-handler.js"></script>
+</body>
+</html>
