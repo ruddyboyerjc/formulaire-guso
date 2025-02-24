@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrat de Prestation de Service Artistique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        .gradient-title {
+            background: linear-gradient(45deg, #9333ea, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .section-gradient {
+            background: linear-gradient(to right, rgb(243 232 255), rgb(253 242 248));
+        }
+        .checkbox-purple {
+            accent-color: #9333ea;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen py-8">
+    <div id="contract" class="container max-w-4xl mx-auto px-4">
+        <!-- En-tête du contrat -->
+        <div class="text-center mb-12">
+            <h1 class="text-3xl font-bold gradient-title mb-4">
+                Contrat de Prestation de Service Artistique
+            </h1>
+        </div>
+
+        <!-- Parties contractantes -->
+        <div class="card p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Entre les soussignés :</h2>
+            <div class="space-y-6">
+                <div class="pl-4 border-l-4 border-purple-500">
+                    <p class="text-gray-600"><span class="font-bold">1. Le Comité des Fêtes de Saint Aubin de Blaye</span></p>
+                    <p class="text-gray-600">Association loi 1901</p>
+                    <p class="text-gray-600">Siège : Mairie de Saint-Aubin-de-Blaye</p>
+                    <p class="text-gray-600">Représentée par M. REREAU Damien, en qualité de Président de l'association</p>
+                    <p class="text-gray-600 italic">Ci-après dénommée "L'Organisateur"</p>
+                </div>
+
+                <div class="pl-4 border-l-4 border-pink-500">
+                    <p class="text-gray-600"><span class="font-bold">2. Ruddy BOYER</span></p>
+                    <p class="text-gray-600">Demeurant au 15A Rue Saint Simon, 33820 Saint-Ciers-Sur-Gironde</p>
+                    <p class="text-gray-600 italic">Ci-après dénommé "L'Artiste"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articles -->
+        <div class="space-y-8">
+            <!-- Article 1 -->
+            <div class="card p-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Article 1 - Objet</h3>
+                <p class="text-gray-600">L'Organisateur engage L'Artiste pour animer la première partie d'une soirée sur le thème des années 80/90.</p>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="card p-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Article 2 - Date, durée et lieu de la prestation</h3>
+                <p class="text-gray-600">La prestation aura lieu le 15 mars à la salle des fêtes.</p>
+                <p class="text-gray-600">L'animation musicale durera deux (2) heures.</p>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="card p-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Article 3 - Conditions techniques</h3>
+                <p class="text-gray-600">La sonorisation sera intégralement fournie et installée par L'Organisateur.</p>
+                <p class="text-gray-600">L'Artiste devra se présenter sur les lieux une heure avant le début de la prestation pour les préparatifs.</p>
+            </div>
+
+            <!-- Article 4 -->
+            <div class="card p-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Article 4 - Rémunération</h3>
+                <div class="space-y-2">
+                    <p class="text-gray-600">Le montant global de la prestation est fixé à 250 € (deux cent cinquante euros).</p>
+                    <p class="text-gray-600">Ce montant se compose d'une partie GUSO et d'une partie salaire net.</p>
+                    <p class="text-gray-600">L'Organisateur s'engage à déclarer la prestation auprès du GUSO (Guichet Unique du Spectacle Occasionnel) et à prendre en charge les cotisations sociales afférentes.</p>
+                    <p class="text-gray-600">Le paiement sera effectué par virement bancaire ou chèque au plus tard le jour de la prestation.</p>
+                </div>
+            </div>
+
+            <!-- Article 5 -->
+            <div class="card p-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Article 5 - Obligations de l'Artiste</h3>
+                <div class="space-y-2">
+                    <p class="text-gray-600">L'Artiste s'engage à assurer la prestation musicale conformément aux attentes du contrat et à respecter les horaires définis.</p>
+                    <p class="text-gray-600">Il devra également fournir toute information nécessaire à la déclaration GUSO.</p>
+                </div>
+            </div>
+
+            <!-- Article 6 -->
+            <div class="card p-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Article 6 - Obligations de l'Organisateur</h3>
+                <div class="space-y-2">
+                    <p class="text-gray-600">L'Organisateur s'engage à fournir une sonorisation adaptée et à respecter ses engagements en matière de déclaration et de paiement.</p>
+                    <p class="text-gray-600">Il s'assure également que les conditions d'accueil de L'Artiste (logistique, accès, repas éventuel) soient adéquates.</p>
+                </div>
+            </div>
+
+            <!-- Signatures -->
+            <div class="card p-8">
+                <p class="text-gray-600 mb-4">Fait à Saint-Aubin-de-Blaye, le 20/02/2025</p>
+                <p class="text-gray-600 mb-8">En deux exemplaires originaux.</p>
+
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <p class="font-bold text-gray-800 mb-4">Signature de l'Artiste :</p>
+                        <label class="flex items-center space-x-3 text-gray-700">
+                            <input type="checkbox" id="signature-artiste" class="checkbox-purple">
+                            <span>Je confirme avoir lu et approuvé ce contrat</span>
+                        </label>
+                    </div>
+                    <div>
+                        <p class="font-bold text-gray-800 mb-4">Signature de l'Organisateur :</p>
+                        <label class="flex items-center space-x-3 text-gray-700">
+                            <input type="checkbox" id="signature-organisateur" class="checkbox-purple">
+                            <span>Je confirme avoir lu et approuvé ce contrat</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fonction pour générer le PDF avec le contrat
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            
+            // Capture de l'élément HTML contenant le contrat
+            html2canvas(document.getElementById('contract')).then(canvas => {
+                const pdf = new jsPDF();
+                
+                // Ajout de l'image du contrat dans le PDF
+                const imgData = canvas.toDataURL('image/png');
+                pdf.addImage(imgData, 'PNG', 10, 10, 180, 0);
+
+                // Sauvegarder le PDF généré
+                pdf.save('contrat_signé.pdf');
+            });
+        }
+
+        // Écouteurs d'événements pour les cases à cocher
+        document.getElementById('signature-artiste').addEventListener('change', function() {
+            if (this.checked && document.getElementById('signature-organisateur').checked) {
+                generatePDF();
+            }
+        });
+
+        document.getElementById('signature-organisateur').addEventListener('change', function() {
+            if (this.checked && document.getElementById('signature-artiste').checked) {
+                generatePDF();
+            }
+        });
+    </script>
+</body>
+</html>
